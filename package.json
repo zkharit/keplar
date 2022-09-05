@@ -19,5 +19,8 @@
   "homepage": "https://github.com/zkharit/keplar#readme",
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.0"
   }
 }
