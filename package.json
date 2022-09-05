@@ -1,0 +1,23 @@
+{
+  "name": "keplar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkharit/keplar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zkharit/keplar/issues"
+  },
+  "homepage": "https://github.com/zkharit/keplar#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
