@@ -24,5 +24,5 @@ fs.createReadStream('data/data.csv')
     })
     .on('end', () => {
         console.log('Finished')
-        console.log(records)       
+        console.log(records.map(records => records['kepler_name']))
     })
