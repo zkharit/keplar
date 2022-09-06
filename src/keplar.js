@@ -3,18 +3,26 @@ const fs = require('fs')
 
 const records = []
 
+function isHabitable(planet) {
+    return planet['koi_disposition'] === 'CONFIRMED'
+    && planet['koi_insol'] > 0.36 && planet["koi_insol"] < 1.11
+    && planet['koi_prad'] < 1.6
+}
+
 fs.createReadStream('data/data.csv')
     .pipe(parse({
         comment: '#',
         columns: true
     }))
     .on('data', (data) => {
-        records.push(data)
+        if(isHabitable(data)) {
+            records.push(data)
+        }
     })
     .on('error', (err) => {
         console.log(err)
     })
     .on('end', () => {
         console.log('Finished')
-        console.log(records)
+        console.log(records)       
     })
